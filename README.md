@@ -25,5 +25,5 @@ This project is licensed under the MIT license.
 
 ## Credits
 [Inquirer.js](https://www.npmjs.com/package/inquirer)
-
+[Jest.js](https://www.npmjs.com/package/jest)
 [Node.js](https://nodejs.org/en/)

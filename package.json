@@ -1,0 +1,28 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "![Github license](https://img.shields.io/badge/license-MIT-blue.svg)",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaylab78/team-profile-generator.git"
+  },
+  "author": "Kayla Backus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaylab78/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/kaylab78/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^7.0.3"
+  },
+  "devDependencies": {
+    "jest": "^28.1.1"
+  }
+}
