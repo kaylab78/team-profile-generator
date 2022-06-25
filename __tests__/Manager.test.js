@@ -13,5 +13,6 @@ test('creates a new manager object', () => {
 test("gets manager's role", () => {
     const manager = new Manager('Kevin', 6, 'email@email.com', 1);
 
+    // Overrides inherited role of 'Employee' with 'Manager'
     expect(manager.getRole()).toEqual(expect.stringContaining('Manager'));
 })
