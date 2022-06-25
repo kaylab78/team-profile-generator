@@ -15,3 +15,10 @@ test("gets intern's school", () => {
 
     expect(intern.getSchool()).toEqual(expect.any(String));
 })
+
+test("gets intern's role", () => {
+    const intern = new Intern('Kevin', 6, 'email@email.com', 'U of M');
+
+    // Overrides inherited role of 'Employee' with 'Intern'
+    expect(intern.getRole()).toEqual(expect.stringContaining('Intern'));
+})
