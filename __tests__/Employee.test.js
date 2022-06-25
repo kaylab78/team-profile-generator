@@ -11,8 +11,14 @@ test('creates a new employee object', () => {
     // end reference
 });
 
-// test("gets employee's name", () => {
+test("gets employee's name", () => {
+    const employee = new Employee('Kevin');
+
+    expect(employee.getName()).toEqual(expect.any(String));
+});
+
+// test("gets employee's id", () => {
 //     const employee = new Employee('Kevin');
 
-//     expect(employee.getName()).toBe('Kevin');
-// })
+//     expect(employee.getId()).toEqual(expect.any(Number));
+// });
