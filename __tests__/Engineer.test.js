@@ -10,3 +10,8 @@ test('creates new engineer object', () => {
     expect(engineer.github).toEqual(expect.any(String));
 });
 
+test("gets engineer's GitHub username", () => {
+    const engineer = new Engineer('Kevin', 6, 'email@email.com', 'lernantino');
+
+    expect(engineer.getGitHub()).toEqual(expect.stringContaining(engineer.github));
+})
