@@ -9,3 +9,9 @@ test('creates new intern object', () => {
     expect(intern.email).toEqual(expect.any(String));
     expect(intern.school).toEqual(expect.any(String));
 })
+
+test("gets intern's school", () => {
+    const intern = new Intern('Kevin', 6, 'email@email.com', 'U of M');
+
+    expect(intern.getSchool()).toEqual(expect.any(String));
+})
