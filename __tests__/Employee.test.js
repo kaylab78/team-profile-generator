@@ -29,7 +29,7 @@ test("gets employee's id", () => {
 test("gets employee's email", () => {
     const employee = new Employee('Kevin', 6, 'email@email.com');
 
-    expect(employee.getEmail()).toEqual(expect.any(String));
+    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email));
 });
 
 test("gets employee's role", () => {
