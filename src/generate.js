@@ -7,7 +7,9 @@ function generate(teamMembers) {
         return `<p>${engineer.getName()}</p>`
     }
 
-    function generateIntern(intern){}
+    function generateIntern(intern){
+        return `<p>${intern.getName()}</p>`
+    }
 
     const html = []
 

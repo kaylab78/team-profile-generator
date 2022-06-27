@@ -71,15 +71,14 @@ function init() {
     };
 
     function createEngineer(){
-        // console.log("Please build your team.");
         inquirer.prompt([{
             type: 'input',
-            name: 'engineerrName',
+            name: 'engineerName',
             message: "What is the engineer's name?"
         },
         {
             type: 'input',
-            name: 'engineer',
+            name: 'engineerId',
             message: "What is the engineer's id number?"
         },
         {
@@ -101,7 +100,35 @@ function init() {
         })
     }
 
-    function createIntern(){}
+    function createIntern(){
+        inquirer.prompt([{
+            type: 'input',
+            name: 'internName',
+            message: "What is the intern's name?"
+        },
+        {
+            type: 'input',
+            name: 'internId',
+            message: "What is the intern's id number?"
+        },
+        {
+            type: 'input',
+            name: 'internEmail',
+            message: "What is the intern's email?"
+        },
+        {
+            type: 'input',
+            name: 'schoolName',
+            message: "What is the name of the intern's school?"
+        }])
+        .then(answers => {
+            const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.schoolName)
+
+            teamMembers.push(intern)
+            idArray.push(answers.internId)
+            createTeam();
+        })
+    }
 
     function buildTeam() {
         // Create the output directory if the dist path doesn't exist
