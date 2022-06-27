@@ -3,7 +3,9 @@ function generate(teamMembers) {
         return `<p>${manager.getName()}</p>`
     };
 
-    function generateEngineer(engineer){}
+    function generateEngineer(engineer){
+        return `<p>${engineer.getName()}</p>`
+    }
 
     function generateIntern(intern){}
 

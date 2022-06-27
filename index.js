@@ -70,7 +70,36 @@ function init() {
         })
     };
 
-    function createEngineer(){}
+    function createEngineer(){
+        // console.log("Please build your team.");
+        inquirer.prompt([{
+            type: 'input',
+            name: 'engineerrName',
+            message: "What is the engineer's name?"
+        },
+        {
+            type: 'input',
+            name: 'engineer',
+            message: "What is the engineer's id number?"
+        },
+        {
+            type: 'input',
+            name: 'engineerEmail',
+            message: "What is the engineer's email?"
+        },
+        {
+            type: 'input',
+            name: 'gitHub',
+            message: "What is the engineer's GitHub username?"
+        }])
+        .then(answers => {
+            const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.gitHub)
+
+            teamMembers.push(engineer)
+            idArray.push(answers.engineerId)
+            createTeam();
+        })
+    }
 
     function createIntern(){}
 
