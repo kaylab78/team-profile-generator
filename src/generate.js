@@ -1,14 +1,32 @@
 function generate(teamMembers) {
     function generateManager(manager) {
-        return `<p>${manager.getName()}</p>`
+        return `<div class="card">
+            <h2>${manager.getName()}</h2>
+            <h3>${manager.getRole()}</h3>
+            <p>ID: ${manager.getId()}</p>
+            <p>Email: <a href="mailto:${manager.getEmail()}" target="_blank">${manager.getEmail()}</a></p>
+            <p>Office Number: ${manager.getOfficeNumber()}</p>
+            </div>`
     };
 
     function generateEngineer(engineer){
-        return `<p>${engineer.getName()}</p>`
+        return `<div class="card">
+            <h2>${engineer.getName()}</h2>
+            <h3>${engineer.getRole()}</h3>
+            <p>ID: ${engineer.getId()}</p>
+            <p>Email: <a href="mailto:${engineer.getEmail()}" target="_blank">${engineer.getEmail()}</a></p>
+            <p>GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank">${engineer.getGitHub()}</a></p>
+            </div>`
     }
 
     function generateIntern(intern){
-        return `<p>${intern.getName()}</p>`
+        return `<div class="card">
+            <h2>${intern.getName()}</h2>
+            <h3>${intern.getRole()}</h3>
+            <p>ID: ${intern.getId()}</p>
+            <p>Email: <a href="mailto:${intern.getEmail()}" target="_blank">${intern.getEmail()}</a></p>
+            <p>School: ${intern.getSchool()}</p>
+            </div>`
     }
 
     const html = []
@@ -45,7 +63,7 @@ module.exports = teamMembers => {
     </head>
     <body>
         <h1>My Team<h1>
-        <div>
+        <div class="deck">
             ${generate(teamMembers)}
         </div>
     </body>
