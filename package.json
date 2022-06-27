@@ -19,10 +19,10 @@
     "url": "https://github.com/kaylab78/team-profile-generator/issues"
   },
   "homepage": "https://github.com/kaylab78/team-profile-generator#readme",
-  "dependencies": {
-    "inquirer": "^7.0.3"
-  },
   "devDependencies": {
     "jest": "^28.1.1"
+  },
+  "dependencies": {
+    "inquirer": "6.3"
   }
 }

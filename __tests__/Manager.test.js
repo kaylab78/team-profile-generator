@@ -16,3 +16,9 @@ test("gets manager's role", () => {
     // Overrides inherited role of 'Employee' with 'Manager'
     expect(manager.getRole()).toEqual(expect.stringContaining('Manager'));
 })
+
+test("gets office number", () => {
+    const manager = new Manager('Kevin', 6, 'email@email.com', 1);
+
+    expect(manager.getOfficeNumber()).toEqual(expect.any(Number));
+})
