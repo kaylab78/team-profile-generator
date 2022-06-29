@@ -4,7 +4,7 @@
 ## Description
 This is a simple team roster generator. Using the command line interface, the user answers questions about their team and an HTML file is automatically formatted with the information provided.
 
-To view a walkthrough video, [click here]().
+To view a walkthrough video, [click here](https://drive.google.com/file/d/1_OXBLotfp6Bn1IKVM9dFpmHF0SPGe-Iy/view?usp=sharing).
 
 ## Table of Contents
 - [Installation](#installation)
