@@ -16,22 +16,54 @@ function init() {
         inquirer.prompt([{
             type: 'input',
             name: 'managerName',
-            message: "What is the manager's name?"
+            message: "What is the manager's name?",
+            validate: managerInput => {
+                if (managerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the manager's name.");
+                    return false;
+                }
+            }    
         },
         {
             type: 'input',
             name: 'managerId',
-            message: "What is the manager's id number?"
+            message: "What is the manager's ID number?",
+            validate: managerInput => {
+                if (managerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the manager's ID.");
+                    return false;
+                }
+            } 
         },
         {
             type: 'input',
             name: 'managerEmail',
-            message: "What is the manager's email?"
+            message: "What is the manager's email?",
+            validate: managerInput => {
+                if (managerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the manager's email.");
+                    return false;
+                }
+            } 
         },
         {
             type: 'input',
             name: 'officeNumber',
-            message: "What is the manager's office number?"
+            message: "What is the manager's office number?",
+            validate: managerInput => {
+                if (managerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the manager's office number.");
+                    return false;
+                }
+            } 
         }])
         .then(answers => {
             const manager = new Manager(answers.managerName, answers.managerId, answers.managerEmail, answers.officeNumber)
@@ -74,22 +106,54 @@ function init() {
         inquirer.prompt([{
             type: 'input',
             name: 'engineerName',
-            message: "What is the engineer's name?"
+            message: "What is the engineer's name?",
+            validate: engineerInput => {
+                if (engineerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the engineer's name.");
+                    return false;
+                }
+            } 
         },
         {
             type: 'input',
             name: 'engineerId',
-            message: "What is the engineer's id number?"
+            message: "What is the engineer's ID number?",
+            validate: engineerInput => {
+                if (engineerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the engineer's ID number.");
+                    return false;
+                }
+            } 
         },
         {
             type: 'input',
             name: 'engineerEmail',
-            message: "What is the engineer's email?"
+            message: "What is the engineer's email?",
+            validate: engineerInput => {
+                if (engineerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the engineer's email.");
+                    return false;
+                }
+            } 
         },
         {
             type: 'input',
             name: 'gitHub',
-            message: "What is the engineer's GitHub username?"
+            message: "What is the engineer's GitHub username?",
+            validate: engineerInput => {
+                if (engineerInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the engineer's GitHub username.");
+                    return false;
+                }
+            } 
         }])
         .then(answers => {
             const engineer = new Engineer(answers.engineerName, answers.engineerId, answers.engineerEmail, answers.gitHub)
@@ -104,22 +168,54 @@ function init() {
         inquirer.prompt([{
             type: 'input',
             name: 'internName',
-            message: "What is the intern's name?"
+            message: "What is the intern's name?",
+            validate: internInput => {
+                if (internInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the intern's name.");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'internId',
-            message: "What is the intern's id number?"
+            message: "What is the intern's ID number?",
+            validate: internInput => {
+                if (internInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the intern's ID.");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'internEmail',
-            message: "What is the intern's email?"
+            message: "What is the intern's email?",
+            validate: internInput => {
+                if (internInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the intern's email.");
+                    return false;
+                }
+            }
         },
         {
             type: 'input',
             name: 'schoolName',
-            message: "What is the name of the intern's school?"
+            message: "What is the name of the intern's school?",
+            validate: internInput => {
+                if (internInput) {
+                    return true;
+                } else {
+                    console.log("Please enter the intern's school.");
+                    return false;
+                }
+            }
         }])
         .then(answers => {
             const intern = new Intern(answers.internName, answers.internId, answers.internEmail, answers.schoolName)
